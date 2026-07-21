@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --font-grotesk: "Space Grotesk", sans-serif;
+  --color-neutral: #0E1721;
+  --color-orange: #FF6B45;
+  --color-backgrorange: #3C0800;
+  --font-inter: "Inter", sans-serif;
+  --font-ibmplex: "IBM Plex Mono", sans-serif;
+  --color-section: #28313C;
+  --color-lightgreen: #56BCAA;
+   --color-bggreen: #005046;
+}
