@@ -45,7 +45,7 @@ export default function App(){
   <>
   <Header screen={screen} setScreen={setScreen} />
   {screen === "input" && <InputScreen onCheck={handleCheck} screen={screen} setScreen={setScreen} />}
-  {screen === "result" && <ResultScreen {...result} screen={screen} setScreen={setScreen} loading={loading} error={error} checkedMessage={checkedMessage}/> } 
+  {screen === "result" && <ResultScreen {...result} screen={screen} setScreen={setScreen} loading={loading} error={error} } 
   <PageFooter />
   </>)
 }
