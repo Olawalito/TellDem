@@ -4,7 +4,7 @@ import { Link2, MessageSquareWarning, FileText, Search, Sparkles, HelpCircle } f
 import { useState,useEffect } from "react";
 
 
-export default function ResultScreen({ score, verdict, signals, breakdown, setScreen, loading, error }) {
+export default function ResultScreen({ score, verdict, signals, breakdown, setScreen, loading, error, checkedMessage }) {
     const iconMap = {
         domain: Link2,
         language: MessageSquareWarning,
@@ -84,6 +84,14 @@ export default function ResultScreen({ score, verdict, signals, breakdown, setSc
     return (
         <div className="min-h-screen w-full bg-black p-3 md:p-8">
             <div className="max-w-3xl mx-auto">
+                <div className="bg-neutral-900 border border-neutral-700 rounded-xl p-4 md:p-5 mb-4 md:mb-6">
+                <p className="text-[10px] md:text-xs text-gray-500 tracking-wide mb-1 font-ibmplex">
+                    YOU CHECKED
+                </p>
+                <p className="text-xs md:text-sm text-gray-300 italic leading-relaxed line-clamp-3 md:line-clamp-none">
+                    "{checkedMessage}"
+                </p>
+            </div>
                 <div className="bg-neutral-800 border border-neutral-700 rounded-xl p-6 md:p-10 flex flex-col items-center">
                     <Gauge score={score} />
                     <div
