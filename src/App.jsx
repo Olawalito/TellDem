@@ -11,11 +11,13 @@ export default function App(){
   const [ result, setResult ] = useState(null);
   const [ loading, setLoading ] = useState(false);
   const [ error, setError ] = useState(null);
+  const [ checkedMessage, setcheckedMessage ] = useState("");
  
   const handleCheck = async (text) => {
     if (!text.trim()) return;
 
     setLoading(true);
+    setcheckedMessage(text);
     setError(null);
     setResult(null);
     setScreen("result");
@@ -45,7 +47,7 @@ export default function App(){
   <>
   <Header screen={screen} setScreen={setScreen} />
   {screen === "input" && <InputScreen onCheck={handleCheck} screen={screen} setScreen={setScreen} />}
-  {screen === "result" && <ResultScreen {...result} screen={screen} setScreen={setScreen} loading={loading} error={error}/>} 
+  {screen === "result" && <ResultScreen {...result} screen={screen} setScreen={setScreen} loading={loading} error={error} checkedMessage={checkedMessage}/> } 
   <PageFooter />
   </>)
 }
