@@ -11,13 +11,11 @@ export default function App(){
   const [ result, setResult ] = useState(null);
   const [ loading, setLoading ] = useState(false);
   const [ error, setError ] = useState(null);
-  const [ checkedMessage, setcheckedMessage ] = useState("");
  
   const handleCheck = async (text) => {
     if (!text.trim()) return;
 
     setLoading(true);
-    setcheckedMessage(text);
     setError(null);
     setResult(null);
     setScreen("result");
@@ -34,7 +32,7 @@ export default function App(){
         }
 
         const data = await response.json();
-        setResult(data);
+        setResult({...data, checkedMessage : text});
         setScreen("result"); 
     } catch (err) {
         console.error("Fetch failure:", err);
