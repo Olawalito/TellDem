@@ -17,6 +17,7 @@ export default function App(){
     setLoading(true);
     setError(null);
     setResult(null);
+    setScreen("result");
 
     try {
         const response = await fetch('http://localhost:3000/api/check', {
@@ -43,7 +44,7 @@ export default function App(){
   <>
   <Header screen={screen} setScreen={setScreen} />
   {screen === "input" && <InputScreen onCheck={handleCheck} screen={screen} setScreen={setScreen} />}
-  {screen === "result" && <ResultScreen {...result} screen={screen} setScreen={setScreen}/>}
+  {screen === "result" && <ResultScreen {...result} screen={screen} setScreen={setScreen} loading={loading} error={error}/>} 
   <Footer screen={screen} setScreen={setScreen} />
   </>)
 }

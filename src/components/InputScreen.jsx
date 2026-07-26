@@ -27,7 +27,6 @@ export default function InputScreen({ onCheck, screen, setScreen }){
         </textarea>
         <button className=" absolute bg-orange-500 font-inter font-semibold px-4 py-2 text-lg rounded-4xl md:rounded-sm bottom-7 right-7 md:right-32 disabled:opacity-40 disabled:cursor-not-allowed" onClick={handleSubmit} disabled={!text.trim()}>Check am</button>
       </div>
-      <p className=" text-orange-200 text-sm font-bold mx-5">OR TRY AN EXAMPLE</p>
       <div>
         <button></button>
         <button></button>

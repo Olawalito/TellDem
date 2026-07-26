@@ -1,8 +1,10 @@
 import Gauge from "./Guage.jsx";
 import SignalCard from "./signalCard.jsx";
 import { Link2, MessageSquareWarning, FileText, Search, Sparkles } from "lucide-react";
+import { useState,useEffect } from "react";
 
-export default function ResultScreen({ score, verdict, signals, breakdown, setScreen }) {
+
+export default function ResultScreen({ score, verdict, signals, breakdown, setScreen, loading, error }) {
     const iconMap = {
         domain: Link2,
         language: MessageSquareWarning,
@@ -10,10 +12,58 @@ export default function ResultScreen({ score, verdict, signals, breakdown, setSc
         factcheck: Search,
     };
 
-    if (!signals) {
+    const loadingMessages = [
+    "Checking under rock...",
+    "Asking your lecturer...",
+    "Calling Aunty Ngozi...",
+    "Consulting the village elders...",
+    "Cross-checking with agbaya...",
+    "Running away from the mis-information bandits...",
+    "Drinking information agbo..."
+];
+
+    const [messageIndex, setMessageIndex] = useState(0);
+    
+    useEffect(() =>{
+        if(!loading) return;
+
+        const interval = setInterval(()=>{
+            setMessageIndex((prev)=> (prev + 1) % loadingMessages.length );
+        },1500
+    );
+
+    return () => clearInterval(interval);
+    },[loading])
+
+    if(loading){
+        return(
+          <div className="min-h-screen w-full bg-black flex items-center justify-center text-white flex-col">
+                <p className="animate-pulse text-lg font-ibmplex text-gray-400">{loadingMessages[messageIndex]}</p>
+            </div>)
+    };
+
+    if (error) {
         return (
-            <div className="min-h-screen w-full bg-black flex items-center justify-center text-white">
-                <p>Loading result...</p>
+            <div className="min-h-screen w-full bg-black flex flex-col items-center justify-center text-white gap-3 px-6 text-center">
+                <p className="font-inter text-lg text-red-400">Something went wrong.</p>
+                <p className="font-inter text-sm text-gray-400">{error}</p>
+                <button
+                    className="bg-orange-300 px-12 py-4 m-4 rounded-3xl font-bold text-red-950 hover:bg-orange-400 transition-colors"
+                    onClick={() => setScreen("input")}
+                >
+                    Try Again
+                </button>
+            </div>
+        );
+    }
+
+
+    if( score === undefined ){
+        return (
+            <div className="min-h-screen w-full bg-black flex items-center justify-center text-white flex-col">
+                <p className="font-inter text-xl">No checks done.</p>
+                <button className="bg-orange-300 px-12 py-4 m-12 rounded-3xl font-bold text-red-950 md:px-16 md:text-lg hover:bg-orange-400 transition-colors" onClick={()=>{setScreen("input")}}>Go paste something</button>
+                
             </div>
         );
     }
@@ -56,9 +106,13 @@ export default function ResultScreen({ score, verdict, signals, breakdown, setSc
 
                 <div className="bg-orange-500/30 border border-orange rounded-xl p-6 flex justify-center items-center text-orange md:max-w-2xl md:mx-auto">
                     <Sparkles size={32} className="text-orange-400 shrink-0 mt-0 mr-3" />
-                    <p className="md:text-base">
-                        TellDem gives signals, not final <br /> truth - always confirm before <br /> sharing
+                    <div className="text-center">
+                        <p className="md:text-base">
+                        TellDem dey give you clues, not final final.  
                     </p>
+                    <p>Still use your head before you share.</p>
+                    </div>
+                    
                 </div>
 
                 <div className="flex justify-center">

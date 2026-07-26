@@ -54,7 +54,7 @@ Web search results: ${searchResults}`;
 
     try {
         const response = await model.generateContent({
-            model: "gemini-3.5-flash",
+            model: "gemini-2.5-flash",
             contents: prompt,
         });
 
