@@ -12,7 +12,7 @@ export default function InputScreen({ onCheck, screen, setScreen }){
     return(
     <>
      <div className="bg-linear-to-b from-black to-black min-h-screen w-full py-4 px-2.5 text-3xl text-center">
-      <h1 className="font-inter  font-bold text-white mx-5 tracking-wide md:text-center md:mt-32 md:text-5xl">
+      <h1 className="font-inter  font-bold text-white mx-5 tracking-wide md:text-center mt-25 md:mt-32 md:text-5xl">
         Before you forward am,<br className="md:hidden" /> make we <br className="hidden md:flex"/> check am first.
       </h1>
       <p className="font-grotesk text-gray-300 mx-5 text-sm mt-4 md:hidden">
@@ -26,11 +26,6 @@ export default function InputScreen({ onCheck, screen, setScreen }){
         onChange={(e)=> {setText(e.target.value)}}>
         </textarea>
         <button className=" absolute bg-orange-500 font-inter font-semibold px-4 py-2 text-lg rounded-4xl md:rounded-sm bottom-7 right-7 md:right-32 disabled:opacity-40 disabled:cursor-not-allowed" onClick={handleSubmit} disabled={!text.trim()}>Check am</button>
-      </div>
-      <div>
-        <button></button>
-        <button></button>
-        <button></button>
       </div>
      </div>
      

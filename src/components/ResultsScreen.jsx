@@ -117,7 +117,7 @@ export default function ResultScreen({ score, verdict, signals, breakdown, setSc
 
                 <div className="flex justify-center">
                     <button
-                        className="bg-orange-300 px-12 py-4 m-12 rounded-3xl font-bold text-red-950 md:px-16 md:text-lg hover:bg-orange-400 transition-colors"
+                        className="bg-orange-300 px-12 py-8 md:py-4 m-12 rounded-3xl font-bold text-red-950 md:px-16 md:text-lg hover:bg-orange-400 transition-colors"
                         onClick={() => setScreen("input")}
                     >
                         Check Another Information

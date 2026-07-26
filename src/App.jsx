@@ -3,6 +3,7 @@ import InputScreen from "./components/InputScreen.jsx";
 import ResultScreen from "./components/ResultsScreen.jsx";
 import Header from "./components/Header.jsx";
 import Footer from "./components/footer.jsx";
+import PageFooter from "./components/pageFooter.jsx";
 
 export default function App(){
 
@@ -45,6 +46,6 @@ export default function App(){
   <Header screen={screen} setScreen={setScreen} />
   {screen === "input" && <InputScreen onCheck={handleCheck} screen={screen} setScreen={setScreen} />}
   {screen === "result" && <ResultScreen {...result} screen={screen} setScreen={setScreen} loading={loading} error={error}/>} 
-  <Footer screen={screen} setScreen={setScreen} />
+  <PageFooter />
   </>)
 }

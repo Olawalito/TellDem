@@ -3,7 +3,7 @@ import result from "../assets/result-logo.png"
 
 export default function Footer({ screen, setScreen }) {
     return (
-        <footer className="fixed bottom-0 left-0 right-0 bg-neutral-900 border-t border-neutral-700 flex justify-around items-center py-3 md:hidden">
+        <footer className="fixed mt-4 bottom-0 left-0 right-0 bg-neutral-900 border-t border-neutral-700 flex justify-around items-center py-3 md:hidden">
                  <button
     type="button"
     onClick={() => setScreen("input")}
