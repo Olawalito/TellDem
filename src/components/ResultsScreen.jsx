@@ -5,6 +5,7 @@ import { useState,useEffect } from "react";
 
 
 export default function ResultScreen({ score, verdict, signals, breakdown, setScreen, loading, error, checkedMessage }) {
+    console.log("checked Message:", checkedMessage);
     const iconMap = {
         domain: Link2,
         language: MessageSquareWarning,
