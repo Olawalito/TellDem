@@ -47,6 +47,8 @@ Respond ONLY with valid JSON in exactly this shape, no extra text. For the verdi
   "breakdown": "<one paragraph in plain English summarizing the overall assessment>"
 }
 
+"signals" must use ONLY these exact key values: "language", "domain", "structural", "factcheck" — do not invent new keys.
+
 Text: "${text}"
 Rule-based score: ${score}
 Rule-based signals: ${JSON.stringify(signals)}

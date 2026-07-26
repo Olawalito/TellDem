@@ -1,6 +1,6 @@
 import Gauge from "./Guage.jsx";
 import SignalCard from "./signalCard.jsx";
-import { Link2, MessageSquareWarning, FileText, Search, Sparkles } from "lucide-react";
+import { Link2, MessageSquareWarning, FileText, Search, Sparkles, HelpCircle } from "lucide-react";
 import { useState,useEffect } from "react";
 
 
@@ -95,7 +95,7 @@ export default function ResultScreen({ score, verdict, signals, breakdown, setSc
                         {signals.map((signal) => (
                             <SignalCard
                                 key={signal.key}
-                                icon={iconMap[signal.key]}
+                                icon={iconMap[signal.key] || HelpCircle} 
                                 title={signal.title}
                                 status={signal.status}
                                 note={signal.note}
