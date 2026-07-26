@@ -19,6 +19,19 @@ export default function ResultScreen({ score, verdict, signals, breakdown, setSc
     "Consulting the village elders...",
     "Cross-checking with agbaya...",
     "Running away from the mis-information bandits...",
+    "Asking Baba Ijebu...",
+    "Sending message to Oga at the top...",
+    "Checking with Mama put down the road...",
+    "Calling the group chat to confirm...",
+    "Interrogating the WhatsApp uncle...",
+    "Verifying with the town crier...",
+    "Asking Alhaji for confirmation...",
+    "Placing call to Abuja...",
+    "Confirming with NAN correspondent...",
+    "Doing small small investigation...",
+    "Checking if na true true...",
+    "Wahala dey, make we confam am...",
+    "Passing through the grapevine...",
     "Drinking information agbo..."
 ];
 
