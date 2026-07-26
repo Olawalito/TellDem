@@ -47,12 +47,14 @@ if (hasRomanceScam) { score -= 25; redFlagCount++; }
         const rating = topClaim.claimReview?.textualRating || "Unclear";
 
         signals.push({
+            title: "factcheck",
             key: "factcheck",
             status: "warn",
             note: `A fact-checker rated a similar claim: "${rating}"`,
         });
     } else {
         signals.push({
+            title: "factcheck",
             key: "factcheck",
             status: "none",
             note: "No matching fact-check found — not proof of truth, just no record.",
@@ -65,6 +67,7 @@ if (hasRomanceScam) { score -= 25; redFlagCount++; }
         redFlagCount++
     }
     signals.push({
+        title: "language",
         key: "language",
         status: hasUrgency ? "warn" : "good",
         note: hasUrgency ? "Uses urgency/pressure language." : "Tone is calm, no rush tactics.",
@@ -73,6 +76,7 @@ if (hasRomanceScam) { score -= 25; redFlagCount++; }
     const hasSuspiciousLink = suspiciousLinkPattern.test(lower);
     if (hasSuspiciousLink) score -= 25;
     signals.push({
+        title: "domain",
         key: "domain",
         status: hasSuspiciousLink ? "bad" : "good",
         note: hasSuspiciousLink ? "Contains a suspicious/shortened link pattern." : "No shady link detected.",
@@ -80,6 +84,7 @@ if (hasRomanceScam) { score -= 25; redFlagCount++; }
 
     const hasSource = sourcePattern.test(lower);
     signals.push({
+        title: "structural",
         key: "structural",
         status: hasSource ? "good" : "warn",
         note: hasSource ? "References a source." : "No named source or byline.",
