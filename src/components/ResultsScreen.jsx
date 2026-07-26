@@ -51,7 +51,7 @@ export default function ResultScreen({ score, verdict, signals, breakdown, setSc
     if(loading){
         return(
           <div className="min-h-screen w-full bg-black flex items-center justify-center text-white flex-col">
-                <p className="animate-pulse text-lg font-ibmplex text-gray-400 ">{loadingMessages[messageIndex]}</p>
+                <p className="animate-pulse text-sm md:text-lg font-ibmplex text-gray-400 text-center">{loadingMessages[messageIndex]}</p>
             </div>)
     };
 
