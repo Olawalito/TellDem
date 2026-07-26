@@ -4,8 +4,7 @@ import { Link2, MessageSquareWarning, FileText, Search, Sparkles, HelpCircle } f
 import { useState,useEffect } from "react";
 
 
-export default function ResultScreen({ score, verdict, signals, breakdown, setScreen, loading, error, checkedMessage }) {
-    console.log("checked Message:", checkedMessage);
+export default function ResultScreen({ score, verdict, signals, breakdown, setScreen, loading, error }) {
     const iconMap = {
         domain: Link2,
         language: MessageSquareWarning,
