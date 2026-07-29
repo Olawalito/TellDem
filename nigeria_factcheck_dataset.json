@@ -1,0 +1,736 @@
+{
+  "trusted_untrusted_domains": [
+    {
+      "domain": "punchng.com",
+      "category": "trusted",
+      "notes": "Punch Newspapers - most widely read daily in Nigeria"
+    },
+    {
+      "domain": "vanguardngr.com",
+      "category": "trusted",
+      "notes": "Vanguard News - major national daily"
+    },
+    {
+      "domain": "premiumtimesng.com",
+      "category": "trusted",
+      "notes": "Premium Times - investigative, IFCN signatory"
+    },
+    {
+      "domain": "guardian.ng",
+      "category": "trusted",
+      "notes": "The Guardian Nigeria - strong editorial standards"
+    },
+    {
+      "domain": "thenationonlineng.net",
+      "category": "trusted",
+      "notes": "The Nation - wide regional reach"
+    },
+    {
+      "domain": "channelstv.com",
+      "category": "trusted",
+      "notes": "Channels Television - 24hr news, video-focused"
+    },
+    {
+      "domain": "saharareporters.com",
+      "category": "trusted",
+      "notes": "Sahara Reporters - citizen journalism, corruption focus"
+    },
+    {
+      "domain": "legit.ng",
+      "category": "trusted",
+      "notes": "Legit.ng - major online news platform"
+    },
+    {
+      "domain": "dailypost.ng",
+      "category": "trusted",
+      "notes": "Daily Post - broad national coverage"
+    },
+    {
+      "domain": "tribuneonlineng.com",
+      "category": "trusted",
+      "notes": "Nigerian Tribune - oldest newspaper in Nigeria"
+    },
+    {
+      "domain": "leadership.ng",
+      "category": "trusted",
+      "notes": "Leadership Newspaper - political/business focus"
+    },
+    {
+      "domain": "businessday.ng",
+      "category": "trusted",
+      "notes": "BusinessDay - leading business/finance daily"
+    },
+    {
+      "domain": "ripplesnigeria.com",
+      "category": "trusted",
+      "notes": "Ripples Nigeria - independent, pro-investigation"
+    },
+    {
+      "domain": "dailynigerian.com",
+      "category": "trusted",
+      "notes": "Daily Nigerian - Abuja-based, factual reporting"
+    },
+    {
+      "domain": "thecable.ng",
+      "category": "trusted",
+      "notes": "TheCable - investigative + breaking political news"
+    },
+    {
+      "domain": "icirnigeria.org",
+      "category": "trusted",
+      "notes": "ICIR - investigative journalism, fact-checking hub"
+    },
+    {
+      "domain": "dubawa.org",
+      "category": "trusted",
+      "notes": "DUBAWA - IFCN signatory, West African fact-checker"
+    },
+    {
+      "domain": "africacheck.org",
+      "category": "trusted",
+      "notes": "Africa Check - continental fact-checking, IFCN"
+    },
+    {
+      "domain": "factcheckhub.com",
+      "category": "trusted",
+      "notes": "FactCheckHub - Nigerian fact-checking coalition"
+    },
+    {
+      "domain": "roundcheck.com.ng",
+      "category": "trusted",
+      "notes": "Roundcheck - youth-led Nigerian fact-checker"
+    },
+    {
+      "domain": "bbc.com",
+      "category": "trusted",
+      "notes": "BBC News Africa - international verification standard"
+    },
+    {
+      "domain": "reuters.com",
+      "category": "trusted",
+      "notes": "Reuters - global wire service, Nigeria bureau"
+    },
+    {
+      "domain": "aljazeera.com",
+      "category": "trusted",
+      "notes": "Al Jazeera - international perspective on Nigeria"
+    },
+    {
+      "domain": "cnbc.com",
+      "category": "trusted",
+      "notes": "CNBC Africa - business/economic news"
+    },
+    {
+      "domain": "ng.usembassy.gov",
+      "category": "trusted",
+      "notes": "U.S. Embassy Nigeria - official government source"
+    },
+    {
+      "domain": "state.gov",
+      "category": "trusted",
+      "notes": "U.S. State Department - official travel/policy info"
+    },
+    {
+      "domain": "ncdc.gov.ng",
+      "category": "trusted",
+      "notes": "Nigeria Centre for Disease Control - health authority"
+    },
+    {
+      "domain": "nafdac.gov.ng",
+      "category": "trusted",
+      "notes": "NAFDAC - drug/food regulatory agency"
+    },
+    {
+      "domain": "cbn.gov.ng",
+      "category": "trusted",
+      "notes": "Central Bank of Nigeria - official monetary authority"
+    },
+    {
+      "domain": "presidency.gov.ng",
+      "category": "trusted",
+      "notes": "Nigerian Presidency - official government source"
+    },
+    {
+      "domain": "nta.ng",
+      "category": "trusted",
+      "notes": "Nigerian Television Authority - state broadcaster"
+    },
+    {
+      "domain": "nass.gov.ng",
+      "category": "trusted",
+      "notes": "National Assembly - legislative information"
+    },
+    {
+      "domain": "nigerianbar.ng",
+      "category": "trusted",
+      "notes": "Nigerian Bar Association - legal authority"
+    },
+    {
+      "domain": "nigerianports.org",
+      "category": "trusted",
+      "notes": "Nigerian Ports Authority - official maritime"
+    },
+    {
+      "domain": "nepc.gov.ng",
+      "category": "trusted",
+      "notes": "Nigerian Export Promotion Council"
+    },
+    {
+      "domain": "slnkz.com",
+      "category": "untrusted",
+      "notes": "Phishing domain used in MTN fake giveaway scams"
+    },
+    {
+      "domain": "data.indigoe.online",
+      "category": "untrusted",
+      "notes": "Redirect target for MTN airtime phishing"
+    },
+    {
+      "domain": "cbex.com",
+      "category": "untrusted",
+      "notes": "Ponzi scheme (2025) - fake crypto investment"
+    },
+    {
+      "domain": "bitfinance.global",
+      "category": "untrusted",
+      "notes": "Ponzi scheme (2025) - fraudulent investment platform"
+    },
+    {
+      "domain": "86fb.com",
+      "category": "untrusted",
+      "notes": "Sports betting Ponzi that collapsed 2021"
+    },
+    {
+      "domain": "racksterli.com",
+      "category": "untrusted",
+      "notes": "Influencer-marketed Ponzi scheme"
+    },
+    {
+      "domain": "inksnation.io",
+      "category": "untrusted",
+      "notes": "Fake digital currency, shut down by SEC"
+    },
+    {
+      "domain": "loom.ng",
+      "category": "untrusted",
+      "notes": "Social media double your money scam"
+    },
+    {
+      "domain": "nnn.ng",
+      "category": "untrusted",
+      "notes": "MMM copycat Ponzi scheme"
+    },
+    {
+      "domain": "gethelpworldwide.com",
+      "category": "untrusted",
+      "notes": "Ponzi/recycling scheme"
+    },
+    {
+      "domain": "twinkas.com",
+      "category": "untrusted",
+      "notes": "Cycling Ponzi scheme"
+    },
+    {
+      "domain": "icharity.club",
+      "category": "untrusted",
+      "notes": "Fake charity Ponzi"
+    },
+    {
+      "domain": "crowd1.com",
+      "category": "untrusted",
+      "notes": "MLM/Ponzi hybrid"
+    },
+    {
+      "domain": "royalq.io",
+      "category": "untrusted",
+      "notes": "Fake crypto trading bot"
+    },
+    {
+      "domain": "ovaioza.com",
+      "category": "untrusted",
+      "notes": "Fake agricultural investment platform"
+    },
+    {
+      "domain": "finafrica.org",
+      "category": "untrusted",
+      "notes": "Fake forex trading platform"
+    },
+    {
+      "domain": "cala.finance",
+      "category": "untrusted",
+      "notes": "DeFi Ponzi clone"
+    },
+    {
+      "domain": "6dollarsinvestment.com",
+      "category": "untrusted",
+      "notes": "Small-cap Ponzi scheme"
+    },
+    {
+      "domain": "sidrainvestment.com",
+      "category": "untrusted",
+      "notes": "Crypto clone scam"
+    },
+    {
+      "domain": "wealthbuddy.ng",
+      "category": "untrusted",
+      "notes": "Fake investment app"
+    },
+    {
+      "domain": "naijagists.com",
+      "category": "untrusted",
+      "notes": "Entertainment gossip, low editorial standards"
+    },
+    {
+      "domain": "pointblanknews.com",
+      "category": "untrusted",
+      "notes": "Tabloid-style, unverified claims"
+    },
+    {
+      "domain": "newsblenda.com",
+      "category": "untrusted",
+      "notes": "Low-credibility aggregator"
+    },
+    {
+      "domain": "medianigeria.com",
+      "category": "untrusted",
+      "notes": "Minimal editorial oversight"
+    },
+    {
+      "domain": "thenews-chronicle.com",
+      "category": "untrusted",
+      "notes": "Unknown provenance, clickbait headlines"
+    },
+    {
+      "domain": "hynaija.com",
+      "category": "untrusted",
+      "notes": "Gossip/entertainment, no fact-checking"
+    }
+  ],
+  "scam_messages": {
+    "phishing_account_takeover": [
+      {
+        "message": "URGENT: Your GTBank account has been temporarily suspended due to suspicious login attempts. Click here to verify immediately: [link] Failure to verify within 24hrs will result in permanent account closure.",
+        "category": "phishing",
+        "explanation": "Fake bank alert using urgency + threat of account closure. Real banks never send verification links via WhatsApp."
+      },
+      {
+        "message": "Your WhatsApp verification code is: 123-456. Someone accidentally entered your number. Please forward this code to help them out.",
+        "category": "account_takeover",
+        "explanation": "Classic verification code scam. Forwarding the code gives attacker full control of your WhatsApp account."
+      },
+      {
+        "message": "MTN Security Alert: Your line will be deactivated today due to incomplete NIN linkage. Update now: [shortened link]",
+        "category": "phishing",
+        "explanation": "Impersonates telco KYC process. Uses government policy (NIN) as pretext to harvest personal data."
+      },
+      {
+        "message": "Dear Customer, your Access Bank ATM card has been blocked. To unblock, call this number immediately and provide your card details for verification.",
+        "category": "phishing",
+        "explanation": "Vishing variant - asks for card details over phone. Real banks never request full card details via call/SMS."
+      }
+    ],
+    "investment_crypto": [
+      {
+        "message": "Invest N50,000 today and get N65,000 in 30 days guaranteed! CBEX is a licensed crypto trading platform used by top bankers. Over 10,000 Nigerians have already cashed out. Don't miss this golden opportunity!",
+        "category": "investment_ponzi",
+        "explanation": "Classic Ponzi language: guaranteed returns, social proof (10,000 cashed out), urgency, fake licensing claims. CBEX was a 2025 Ponzi scheme."
+      },
+      {
+        "message": "I made N2.3 million in 2 weeks with this forex robot. My mentor showed me the secret. If you want the same results, deposit N20,000 to get started. Limited slots remaining!",
+        "category": "investment_scam",
+        "explanation": "Fake testimonial + scarcity tactic. Forex robot and mentor are common Ponzi framing in Nigeria."
+      },
+      {
+        "message": "Double your money in 7 days! Loom is the new way Nigerians are beating the economy. Join my WhatsApp group, provide help of N10,000 and receive N20,000. No risk, 100% tested!",
+        "category": "investment_ponzi",
+        "explanation": "Provide help/receive help is MMM-era language recycled into new schemes. Beating the economy preys on economic hardship."
+      },
+      {
+        "message": "Sidra Investment: The halal crypto that pays 40% monthly. Sharia-compliant and backed by UAE sheikhs. Send USDT to this wallet and watch your money grow while you sleep.",
+        "category": "crypto_scam",
+        "explanation": "Exploits religious trust (halal/Sharia) and targets Muslim communities. Fake backed by sheikhs authority claim."
+      }
+    ],
+    "fake_job_offers": [
+      {
+        "message": "CONGRATULATIONS! You have been selected for a remote data entry position at Shell Nigeria. Salary: N350,000/month. To secure your slot, pay a N5,000 application processing fee to this account.",
+        "category": "fake_job",
+        "explanation": "Real companies never charge application fees. Shell Nigeria is impersonated frequently."
+      },
+      {
+        "message": "UNICEF Nigeria is recruiting 500 graduates nationwide. No experience needed. Submit your CV and pay N2,500 for the aptitude test form. Deadline: tomorrow!",
+        "category": "fake_job",
+        "explanation": "Exploits reputable NGO name + mass recruitment appeal + artificial deadline."
+      },
+      {
+        "message": "Work from home and earn $500 weekly! We need 20 Nigerians urgently for Amazon review jobs. Send N10,000 for your starter kit and training manual.",
+        "category": "fake_job",
+        "explanation": "Starter kit fee is the scam. Amazon does not charge for review programs."
+      },
+      {
+        "message": "Dangote Refinery mass recruitment is ongoing! 10,000 positions available. Apply now at [fake domain]. Pay N3,000 for fast-track application processing.",
+        "category": "fake_job",
+        "explanation": "Exploits major employer name + mass hiring narrative. Fake domain mimics real company."
+      }
+    ],
+    "fake_giveaways_lottery": [
+      {
+        "message": "Are you using MTN? Check if you're eligible to get MTN N10,000 AIRTIME AND 5GB DATA, celebrating 250 million subscribers in Africa. Click https://slnkz.com/Get-bonus",
+        "category": "fake_giveaway",
+        "explanation": "Real MTN phishing campaign documented by FactCheckHub. Link redirects to data-harvesting site with fake Facebook comments."
+      },
+      {
+        "message": "I received N450,000 from MTN Mobile Money giveaway! You should try it too, it's really easy. Click here to claim your Ramadan gift: [link]",
+        "category": "fake_giveaway",
+        "explanation": "Documented by Africa Check. Requires sharing to 5-20 friends before receiving gift - reach-farming scam."
+      },
+      {
+        "message": "DANGOTE FOUNDATION 2025 EMPOWERMENT: You have been randomly selected to receive N100,000 cash grant. To claim, send your BVN and account details to this WhatsApp number.",
+        "category": "fake_lottery",
+        "explanation": "Impersonates Dangote Foundation. Randomly selected + BVN request = identity theft setup."
+      },
+      {
+        "message": "CONGRATULATIONS! Your email won N5,000,000 in the Coca-Cola Nigeria 50th Anniversary draw. Contact our agent to pay N15,000 for clearance/affidavit processing.",
+        "category": "fake_lottery",
+        "explanation": "Classic advance-fee fraud. Real lotteries never require payment to claim prizes."
+      }
+    ],
+    "health_misinformation": [
+      {
+        "message": "Drink warm water with lemon and baking soda every morning to cure cancer in 30 days. Big Pharma doesn't want you to know this. Share to save a life!",
+        "category": "health_misinfo",
+        "explanation": "Miracle cure + conspiracy framing (Big Pharma) + emotional manipulation (save a life). No clinical evidence."
+      },
+      {
+        "message": "Garri causes blindness and cancer because of the cyanide in cassava. Stop eating garri immediately! This is why our grandfathers lived longer - they didn't eat processed garri.",
+        "category": "health_misinfo",
+        "explanation": "Exploits cultural food fears. Cyanide in cassava is neutralized by proper processing; garri is safe when prepared correctly."
+      },
+      {
+        "message": "Soaked fenugreek seeds improve egg quality and boost libido in women. Fertility doctors are hiding this natural remedy from Nigerian women.",
+        "category": "health_misinfo",
+        "explanation": "Documented false claim by Dubawa. No clinical evidence. Uses doctors hiding it conspiracy framing."
+      },
+      {
+        "message": "COVID-19 vaccine causes infertility in Nigerian women. The government is using it to reduce population. Do not take the vaccine!",
+        "category": "health_misinfo",
+        "explanation": "Vaccine hesitancy narrative targeting women. Exploits historical medical mistrust + fertility fears."
+      }
+    ],
+    "political_election_misinformation": [
+      {
+        "message": "BREAKING: INEC has cancelled the election results in 5 LGAs of Kano. PDP candidate has been declared winner by the tribunal. Share before they delete this!",
+        "category": "election_misinfo",
+        "explanation": "Fake breaking news + urgency + share before deletion manipulation. Exploits post-election anxiety."
+      },
+      {
+        "message": "Video: Peter Obi caught on camera agreeing to sell Anambra state assets to foreign investors if elected. This man cannot be trusted!",
+        "category": "election_misinfo",
+        "explanation": "AI-generated/manipulated video claim. Deepfake-style misinformation targeting candidates."
+      },
+      {
+        "message": "The new tax reform means anyone earning N800,000 per month will pay 20% tax. Tinubu is punishing the middle class!",
+        "category": "political_misinfo",
+        "explanation": "Misrepresents progressive tax structure. N800,000 is annual threshold, not monthly. Documented by FactCheckHub."
+      },
+      {
+        "message": "Trump has revoked 80,000 Nigerian visas exclusively. Buhari is dead in London. Share to expose the government's lies!",
+        "category": "political_misinfo",
+        "explanation": "Compound falsehoods mixing international and domestic claims. Documented by FactCheckHub as recycled/fabricated."
+      }
+    ],
+    "romance_scams": [
+      {
+        "message": "Hello dear, I'm Captain James, stationed in Afghanistan with the U.S. Army. I came across your profile and felt an instant connection. I hope we can build something special. I have a daughter named Lisa in boarding school...",
+        "category": "romance_scam",
+        "explanation": "Classic military man persona. Creates emotional backstory (daughter, danger) to build trust before money requests."
+      },
+      {
+        "message": "My love, I bought you a surprise gift - a gold necklace and iPhone 16 - but the courier says I need to pay N150,000 customs clearance fee. Can you help me? I'll pay you back when we meet.",
+        "category": "romance_scam",
+        "explanation": "Gift stuck in customs is a standard romance scam playbook. Victim pays fake fees, gift never arrives."
+      },
+      {
+        "message": "Baby, I want to retire soon and spend my life with you. But my bank account is frozen because I'm on a military base. I need N200,000 to process my leave so I can fly to Nigeria to meet you.",
+        "category": "romance_scam",
+        "explanation": "Combines retirement fantasy + financial emergency. Frozen account and leave processing fee are fictional military concepts."
+      },
+      {
+        "message": "You are the most beautiful person I know, inside and out. I can't bear to be without you. I need someone to love me for who I am, not what I have. Can you help me with N50,000 for my daughter's school fees?",
+        "category": "romance_scam",
+        "explanation": "Heavy emotional manipulation (love bombing) pivots to financial request. Targets loneliness and compassion."
+      }
+    ]
+  },
+  "personal_nonsense_examples": [
+    {
+      "example": "Am I famous?",
+      "reason": "Subjective self-assessment; no objective metric of fame without context."
+    },
+    {
+      "example": "Do you think I'm pretty?",
+      "reason": "Personal opinion; no factual basis to verify."
+    },
+    {
+      "example": "Hello, how are you?",
+      "reason": "Greeting, not a factual claim."
+    },
+    {
+      "example": "Good morning",
+      "reason": "Social greeting with no verifiable content."
+    },
+    {
+      "example": "lol",
+      "reason": "Expression of emotion/reaction, not a claim."
+    },
+    {
+      "example": "haha",
+      "reason": "Expression of emotion/reaction, not a claim."
+    },
+    {
+      "example": "What should I eat for dinner?",
+      "reason": "Personal preference request, not a factual claim."
+    },
+    {
+      "example": "Tell me a joke",
+      "reason": "Entertainment request; jokes are fictional by design."
+    },
+    {
+      "example": "Who is my soulmate?",
+      "reason": "Supernatural/metaphysical claim with no empirical basis."
+    },
+    {
+      "example": "Will I be rich someday?",
+      "reason": "Future prediction about an individual; unverifiable."
+    },
+    {
+      "example": "Why doesn't my crush like me back?",
+      "reason": "Personal relationship question requiring private knowledge."
+    },
+    {
+      "example": "What is the meaning of life?",
+      "reason": "Philosophical question with no objective factual answer."
+    },
+    {
+      "example": "Banana",
+      "reason": "Random single word with no claim to evaluate."
+    },
+    {
+      "example": "I love pizza",
+      "reason": "Personal preference statement, not a universal claim."
+    },
+    {
+      "example": "My head hurts",
+      "reason": "Personal health symptom, not a general factual claim."
+    },
+    {
+      "example": "Can you pray for me?",
+      "reason": "Religious/spiritual request, not a verifiable statement."
+    }
+  ],
+  "red_flag_phrases": {
+    "general_urgency": [
+      "Act now before it's too late",
+      "Limited time offer - expires in 24 hours",
+      "Urgent!!!",
+      "URGENT",
+      "Share before they delete this",
+      "Only 10 slots remaining",
+      "This is not a joke",
+      "Do not ignore this message",
+      "Your account will be suspended permanently",
+      "Final warning",
+      "Immediate action required",
+      "Time is running out",
+      "Don't miss out",
+      "Last chance",
+      "Exclusive offer for the first 50 people"
+    ],
+    "nigerian_scam_phrases": [
+      "Provide Help (PH) and Get Help (GH)",
+      "Double your money in X days",
+      "I received NXXX,000, you should try it too",
+      "Click here to claim your bonus/airtime/data",
+      "Send to 12 WhatsApp groups to activate",
+      "Your BVN is required for verification",
+      "I am a widow/orphan of late General/Minister",
+      "God will bless you if you help me",
+      "This is a Ramadan/Christmas/Easter gift from [brand]",
+      "I am a white man looking for an African wife",
+      "My account is frozen because I am on a military base",
+      "The government is hiding this from Nigerians",
+      "Big Pharma doesn't want you to know",
+      "Verified by [fake organization]",
+      "No risk, 100% guaranteed returns"
+    ]
+  },
+  "suspicious_url_patterns": [
+    {
+      "pattern": "slnkz.com/xxx",
+      "reason": "URL shortener masking phishing destination",
+      "context": "Used in MTN fake giveaway campaigns"
+    },
+    {
+      "pattern": "data.indigoe.online/xxx",
+      "reason": "Non-brand domain impersonating telco",
+      "context": "Redirect target for MTN phishing"
+    },
+    {
+      "pattern": "cbex.com / cbex.io / cbex.ng",
+      "reason": "Clone domains of collapsed Ponzi",
+      "context": "CBEX was a 2025 Nigerian Ponzi scheme"
+    },
+    {
+      "pattern": "bitfinance.global",
+      "reason": "Generic finance + new TLD",
+      "context": "2025 Ponzi scheme domain"
+    },
+    {
+      "pattern": "racksterli.com / racksterli.ng",
+      "reason": "Misspelled or variant domains",
+      "context": "Known Ponzi that used influencer marketing"
+    },
+    {
+      "pattern": "mtn-free-data.xyz",
+      "reason": "Brand name + free offer + cheap TLD",
+      "context": "Classic phishing pattern"
+    },
+    {
+      "pattern": "dangote-foundation-giveaway.tk",
+      "reason": "Brand + giveaway + free domain",
+      "context": ".tk domains are frequently abused"
+    },
+    {
+      "pattern": "nnn.ng / twinkas.com / loom.ng",
+      "reason": "Ponzi scheme brand domains",
+      "context": "Historical Nigerian scam sites"
+    },
+    {
+      "pattern": "secure-bank-verify.tk",
+      "reason": "Secure + bank + verify + free TLD",
+      "context": "Fake bank login pages"
+    },
+    {
+      "pattern": "nigerianews-[random].blogspot.com",
+      "reason": "News aggregator on free blog platform",
+      "context": "Often used for clickbait/misinformation"
+    },
+    {
+      "pattern": "whatsapp-update-verification.com",
+      "reason": "App name + update + verify",
+      "context": "Fake WhatsApp support phishing"
+    },
+    {
+      "pattern": "tinyurl.com/xxxxx / bit.ly/xxxxx",
+      "reason": "Shortened links in unsolicited messages",
+      "context": "Obscures final destination"
+    },
+    {
+      "pattern": "gov.ng-[randomstring].com",
+      "reason": "Government domain + extra suffix",
+      "context": "Impersonates Nigerian government sites"
+    },
+    {
+      "pattern": "cbn-online-banking.secure-login.tk",
+      "reason": "Authority acronym + banking + secure + free TLD",
+      "context": "Multi-layer fake authority signaling"
+    },
+    {
+      "pattern": "amazon-jobs-nigeria.work",
+      "reason": "Brand + country + generic TLD",
+      "context": "Fake job recruitment domains"
+    }
+  ],
+  "factcheck_api_test_claims": [
+    {
+      "claim": "Nigeria was designated a Country of Particular Concern by the U.S. over Christian persecution in 2025.",
+      "factchecker": "FactCheckHub",
+      "verdict": "misleading",
+      "notes": "Trump made the designation; but viral claims exaggerated scope and attributed false reactions to Nigerian officials."
+    },
+    {
+      "claim": "President Tinubu said Nigerians have no fear of whatever Trump is doing in response to the CPC designation.",
+      "factchecker": "FactCheckHub",
+      "verdict": "false",
+      "notes": "Video predated Trump's remarks by 2 months; taken out of context."
+    },
+    {
+      "claim": "Trump revoked 80,000 visas exclusively for Nigerians.",
+      "factchecker": "FactCheckHub",
+      "verdict": "misleading",
+      "notes": "Visas were revoked for multiple countries; not Nigeria-specific."
+    },
+    {
+      "claim": "Nigerians earning N800,000 annually will pay 11-20% personal income tax under the 2025 Tax Act.",
+      "factchecker": "FactCheckHub",
+      "verdict": "misleading",
+      "notes": "N800,000 is the 0% threshold; rates are progressive above that."
+    },
+    {
+      "claim": "Nigerians will pay N500 for every N10,000 spent on petrol under the new tax law.",
+      "factchecker": "FactCheckHub",
+      "verdict": "misleading",
+      "notes": "5% fuel levy exists but is not new; no confirmed start date."
+    },
+    {
+      "claim": "Former President Muhammadu Buhari died in London in 2025.",
+      "factchecker": "FactCheckHub",
+      "verdict": "false",
+      "notes": "Buhari was alive; funeral video was from Katsina governor's mother."
+    },
+    {
+      "claim": "Peter Obi was invited to Donald Trump's 2025 inauguration.",
+      "factchecker": "FactCheckHub / DUBAWA",
+      "verdict": "false",
+      "notes": "Not on official guest list; claim originated from pro-Obi platform."
+    },
+    {
+      "claim": "Burkina Faso's Ibrahim Traore rejected a personal invitation to Trump's inauguration.",
+      "factchecker": "DUBAWA",
+      "verdict": "false",
+      "notes": "Traore was never invited; no African heads of state were invited."
+    },
+    {
+      "claim": "INTERPOL issued an arrest warrant for Burkina Faso President Ibrahim Traore.",
+      "factchecker": "DUBAWA",
+      "verdict": "false",
+      "notes": "INTERPOL issues Red Notices, not arrest warrants."
+    },
+    {
+      "claim": "Ibrahim Traore made $3 billion from electric car sales in Burkina Faso.",
+      "factchecker": "DUBAWA",
+      "verdict": "false",
+      "notes": "AI-generated video; company and news agency were fictitious."
+    },
+    {
+      "claim": "MTN is giving away N10,000 airtime and 5GB data to celebrate 250 million subscribers.",
+      "factchecker": "FactCheckHub",
+      "verdict": "false",
+      "notes": "Phishing scam; link redirects to data-harvesting site."
+    },
+    {
+      "claim": "MTN is offering N450,000 Mobile Money Ramadan gift via online links.",
+      "factchecker": "Africa Check",
+      "verdict": "false",
+      "notes": "Scam requiring users to share links to 5-20 friends."
+    },
+    {
+      "claim": "Soaked fenugreek seeds improve egg quality and boost libido.",
+      "factchecker": "DUBAWA",
+      "verdict": "false",
+      "notes": "No scientific evidence supporting the claim."
+    },
+    {
+      "claim": "Garri causes blindness and cancer due to cyanide in cassava.",
+      "factchecker": "DUBAWA / Health Authorities",
+      "verdict": "false",
+      "notes": "Properly processed garri is safe; cyanide is neutralized during fermentation/drying."
+    },
+    {
+      "claim": "A church was set ablaze by Islamic extremists in northern Nigeria (video).",
+      "factchecker": "FactCheckHub",
+      "verdict": "misleading",
+      "notes": "Video was from Ghana nursing college fire, not Nigeria."
+    }
+  ]
+}

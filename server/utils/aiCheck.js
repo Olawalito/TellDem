@@ -15,8 +15,13 @@ const isUrl = (str) => {
 
 export const aiCheck = async (text) => {
     const ruleBasedResult = await evaluate(text);
-    const { signals, score } = ruleBasedResult;
+    const { signals, score, applicable } = ruleBasedResult;
 
+    if (applicable === false ){
+        return ruleBasedResult
+    }
+
+    else{
    let searchResults = "No web search results available.";
 try {
     if (isUrl(text.trim())) {
@@ -71,5 +76,5 @@ Web search results: ${searchResults}`;
         console.log("AI check failed. Falling back to rule-based result");
         console.log("FULL ERROR:", error);
         return ruleBasedResult;
-    }
+    }}
 };
