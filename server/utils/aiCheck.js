@@ -1,7 +1,9 @@
 import { evaluate } from "./evaluate.js";
 import { GoogleGenAI } from "@google/genai";
+import Groq from "groq-sdk";
 import { tavily } from "@tavily/core";
 
+const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 const tavilyClient = tavily({ apiKey: process.env.TAVILY_API_KEY });
 
@@ -36,7 +38,7 @@ export const aiCheck = async (text) => {
     console.log("Tavily call failed:", searchError.message);
   }
 
-  // 2. Unified Master Prompt for Both AIs
+  // 2. Unified Master Prompt
   const prompt = `You are a media literacy assistant for Nigerian users, helping people judge if a message or claim is credible.
 
 You will receive: the original text, a rule-based score, a verdict, a signals array from an algorithm that already checked language patterns, domain reputation, and structure, and real web search results.
@@ -60,13 +62,13 @@ Rule-based score: ${score}
 Rule-based signals: ${JSON.stringify(signals)}
 Web search results: ${searchResults}`;
 
-  
+  // 3. Primary Call: Gemini
   try {
     const response = await ai.models.generateContent({
-      model: "gemini-3.5-flash",
+      model: "gemini-3.5-flash", 
       contents: prompt,
       config: {
-        responseMimeType: "application/json" // Native JSON enforcement
+        responseMimeType: "application/json"
       }
     });
 
@@ -76,39 +78,28 @@ Web search results: ${searchResults}`;
   } catch (geminiError) {
     console.log("Gemini check failed, switching to Groq fallback...", geminiError.message);
 
-    // 4. Groq Fallback Engine
+    // 4. Secondary Call: Groq SDK Fallback
     try {
-      const groqResponse = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-        method: "POST",
-        headers: {
-          "Authorization": `Bearer ${process.env.GROQ_API_KEY}`,
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          model: "llama-3.3-70b-versatile",
-          messages: [
-            {
-              role: "user",
-              content: prompt
-            }
-          ],
-          response_format: { type: "json_object" }
-        })
+      const groqResponse = await groq.chat.completions.create({
+        model: "llama-3.3-70b-versatile",
+        messages: [
+          {
+            role: "user",
+            content: prompt
+          }
+        ],
+        response_format: { type: "json_object" }
       });
 
-      if (!groqResponse.ok) {
-        throw new Error(`Groq API returned status code ${groqResponse.status}`);
-      }
-
-      const groqData = await groqResponse.json();
-      const result = JSON.parse(groqData.choices[0].message.content);
+      const rawContent = groqResponse.choices[0]?.message?.content || "{}";
+      const result = JSON.parse(rawContent);
 
       return { ...result, source: "groq" };
 
     } catch (groqError) {
       console.log("Both AI checks failed. Falling back to local rule-based result.");
       console.log("Groq Error:", groqError.message);
-      
+
       return { ...ruleBasedResult, source: "rule-based" };
     }
   }
