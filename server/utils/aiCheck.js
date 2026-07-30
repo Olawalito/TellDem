@@ -71,10 +71,11 @@ Web search results: ${searchResults}`;
         const cleanJson = rawText.slice(jsonStart, jsonEnd + 1);
         const result = JSON.parse(cleanJson);
 
-        return result;
+        return {...result, source: "ai"};
     } catch (error) {
         console.log("AI check failed. Falling back to rule-based result");
         console.log("FULL ERROR:", error);
         return ruleBasedResult;
+        return {...result, source: "ai"};
     }}
 };
