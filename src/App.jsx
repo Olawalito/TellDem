@@ -32,7 +32,7 @@ export default function App(){
         }
 
         const data = await response.json();
-        console.log("Result source:", data.source)
+        console.log("Result source:", data.source);
         setResult({...data, checkedMessage : text});
         setScreen("result"); 
     } catch (err) {
