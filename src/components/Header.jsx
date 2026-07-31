@@ -13,7 +13,7 @@ export default function Header({ screen, setScreen }) {
                     onClick={() => setScreen("input")}
                     className={`${
                         screen === "input" ? "bg-orange text-black" : "text-gray-500"
-                    } flex items-center gap-1.5 md:gap-2 p-1 px-2.5 md:px-4 rounded-lg text-xs md:text-base transition-colors`}
+                    } flex items-center gap-1.5 md:gap-2 p-1 px-2.5 md:px-4 rounded-lg text-xs md:text-base transition-colors font-grotesk font-bold`}
                 >
                     <img src={input} alt="" className="w-4 h-4 md:w-5 md:h-5" />
                     Input
@@ -23,7 +23,7 @@ export default function Header({ screen, setScreen }) {
                     onClick={() => setScreen("result")}
                     className={`${
                         screen === "result" ? "bg-orange text-black" : "text-gray-500"
-                    } flex items-center gap-1.5 md:gap-2 p-1 px-2.5 md:px-4 rounded-lg text-xs md:text-base transition-colors`}
+                    } flex items-center gap-1.5 md:gap-2 p-1 px-2.5 md:px-4 rounded-lg text-xs md:text-base transition-colors font-grotesk font-bold`}
                 >
                     <img src={result} alt="" className="w-4 h-4 md:w-5 md:h-5" />
                     Result

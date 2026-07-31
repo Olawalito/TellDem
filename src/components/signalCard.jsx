@@ -6,7 +6,7 @@ const statusStyles = {
 };
 
 export default function SignalCard({ icon: Icon, title, status, note }) {
-    const s = statusStyles[status];
+    const s = statusStyles[status] || statusStyles.none;
 
     return (
         <div className="bg-neutral-800 border border-neutral-700 rounded-2xl p-4 flex gap-3 items-start my-4">

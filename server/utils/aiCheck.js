@@ -56,6 +56,7 @@ Respond ONLY with valid JSON in exactly this shape, no extra text. For the verdi
 }
 
 "signals" must use ONLY these exact key values: "language", "domain", "structural", "factcheck" — do not invent new keys.
+"status" must be ONLY one of these exact values: "good", "warn", "bad", "none" — do not invent new statuses.
 
 Text: "${text}"
 Rule-based score: ${score}
@@ -65,7 +66,7 @@ Web search results: ${searchResults}`;
   // 3. Primary Call: Gemini
   try {
     const response = await ai.models.generateContent({
-      model: "gemini-3.5-flash", 
+      model: "gemini-2.5-flash", 
       contents: prompt,
       config: {
         responseMimeType: "application/json"

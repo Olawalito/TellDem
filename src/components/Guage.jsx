@@ -1,5 +1,5 @@
 export default function Gauge({ score}) {
-    const pathLength = 251; // fixed length of the semicircle path below
+    const pathLength = 251; 
     const color = score > 70 ? "#3FA796" : score > 40 ? "#E8A33D" : "#D64545";
     return (
         <div className="relative w-56 h-32 mx-auto">
