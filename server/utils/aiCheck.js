@@ -16,8 +16,9 @@ const isUrl = (str) => {
   }
 };
 
-export const aiCheck = async (text) => {
+export const aiCheck = async (text, imageAnalysis = null) => {
   const ruleBasedResult = await evaluate(text);
+  const imageContext = imageAnalysis ? `Image analysis is: ${JSON.stringify(imageAnalysis)}`: ` No imag analysis provided`
   const { signals, score, applicable } = ruleBasedResult;
 
   if (applicable === false) {
@@ -27,13 +28,17 @@ export const aiCheck = async (text) => {
   // 1. Gather Tavily Search/Extract Context
   let searchResults = "No web search results available.";
   try {
+    if (text && text.trim()){
     if (isUrl(text.trim())) {
       const extracted = await tavilyClient.extract([text.trim()]);
       searchResults = JSON.stringify(extracted.results);
     } else {
       const tavilyResponse = await tavilyClient.search(text, { searchDepth: "advanced" });
-      searchResults = JSON.stringify(tavilyResponse.results);
-    }
+      searchResults = JSON.stringify(tavilyResponse.results);}}
+      else{
+        searchResults = "No text was provided — evaluating based on image analysis only.";
+      }
+    
   } catch (searchError) {
     console.log("Tavily call failed:", searchError.message);
   }
@@ -41,9 +46,15 @@ export const aiCheck = async (text) => {
   // 2. Unified Master Prompt
   const prompt = `You are a media literacy assistant for Nigerian users, helping people judge if a message or claim is credible.
 
-You will receive: the original text, a rule-based score, a verdict, a signals array from an algorithm that already checked language patterns, domain reputation, and structure, and real web search results.
+You will receive: the original text, a rule-based score, a verdict, a signals array from an algorithm that already checked language patterns, domain reputation, and structure,real web search results, and/or an image analysis .
 
 Using the web search results provided, assess the plausibility of the claim and blend it with the rule-based score to produce a final credibility assessment. If the search results don't clarify things, say so rather than guessing confidently.
+
+If image analysis data is provided, factor in whether the image is reused/out-of-context or likely AI-generated when forming your credibility assessment and breakdown.
+
+When there is no text at all AND no image analysis, treat the submission as empty and give a score of 0 with "not applicable."
+
+When there is no text but image analysis IS provided, evaluate credibility based on the image analysis alone (is it reused/out-of-context, is it likely AI-generated) — do not treat this as "not applicable."
 
 When text is not applicable (like mistypes, gibberish, or one-word messages), give a score of 0 and write "not applicable" where fit.
 
@@ -61,7 +72,9 @@ Respond ONLY with valid JSON in exactly this shape, no extra text. For the verdi
 Text: "${text}"
 Rule-based score: ${score}
 Rule-based signals: ${JSON.stringify(signals)}
-Web search results: ${searchResults}`;
+Web search results: ${searchResults}
+Image Analysis: ${imageContext}`;
+
 
   // 3. Primary Call: Gemini
   try {

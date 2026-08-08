@@ -4,17 +4,29 @@ import { createWorker } from "tesseract.js";
 export default function InputScreen({ onCheck, screen, setScreen }){
     const [text, setText] = useState("");
     const [ocrLoading, setOcrLoading] = useState(false);
+    const [ img, setImg ] = useState(null);
+    const [previewUrl, setPreviewUrl] = useState(null);
 
 const handleImgUpload = async (e) => {
     const file = e.target.files[0];
     if (!file) return;
 
+    setImg(file);
+    setPreviewUrl(URL.createObjectURL(file))
     setOcrLoading(true);
+
     try {
+        const reader = new FileReader();
+        const dataUrl = await new Promise((resolve, reject) => {
+            reader.onload = () => resolve(reader.result);
+            reader.onerror = reject;
+            reader.readAsDataURL(file);
+        });
+
         const worker = await createWorker("eng");
-        const { data: { text: extractedText } } = await worker.recognize(file);
+        const { data: { text: extractedText } } = await worker.recognize(dataUrl);
         setText(extractedText.trim());
-        await worker.terminate(); 
+        await worker.terminate();
     } catch (error) {
         console.log("OCR failed:", error);
     } finally {
@@ -23,8 +35,8 @@ const handleImgUpload = async (e) => {
 };
 
     const handleSubmit = () => {
-      if(!text.trim()) return;
-      onCheck(text);
+      if(!text.trim() && !img) return;
+      onCheck(text, img);
       setScreen("result");
     }
 
@@ -41,14 +53,28 @@ const handleImgUpload = async (e) => {
         Combat misinformation in the Nigerian landscape. Paste a news clip, <br />WhatsApp message, headline or screenshot to verify the facts.
       </p>
       <div className="p-4 relative flex flex-col md:px-24">
-    <textarea
-        name=""
-        id=""
-        value={text}
-        placeholder={`${window.innerWidth < 768 ? "Paste Message here..." : "Paste claim here... 'Did the government really say...?'"}`}
-        className="bg-neutral-900 focus:ring-0 outline-none resize-none mt-5 md:mt-12 text-white w-full p-4 md:p-12 md:text-2xl rounded-6xl text-sm h-80 ring-0 pb-16 md:pb-20"
-        onChange={(e) => setText(e.target.value)}
-    ></textarea>
+    <div className="bg-gray-900 rounded-6xl mt-5 md:mt-12 p-4 md:p-12 pb-16 md:pb-20">
+        {previewUrl && (
+            <div className="relative inline-block mb-3">
+                <img src={previewUrl} alt="Uploaded" className="h-32 w-32 md:h-32 md:w-32 object-cover rounded-lg" />
+                <button
+                    onClick={() => { setImg(null); setPreviewUrl(null); }}
+                    className="absolute -top-2 -right-2 bg-black text-white text-xs w-5 h-5 rounded-full flex items-center justify-center"
+                >
+                    ×
+                </button>
+            </div>
+        )}
+
+        <textarea
+            name=""
+            id=""
+            value={text}
+            placeholder={`${window.innerWidth < 768 ? "Paste Message here..." : "Paste claim here... 'Did the government really say...?'"}`}
+            className="bg-transparent focus:ring-0 outline-none resize-none text-white w-full md:text-2xl text-sm h-64 ring-0"
+            onChange={(e) => setText(e.target.value)}
+        ></textarea>
+    </div>
 
     <label className="absolute bottom-9 left-8 md:left-32 flex items-center justify-center w-9 h-9 md:w-11 md:h-11 rounded-lg border border-gray-600 text-gray-400 text-xl cursor-pointer hover:border-orange-400 hover:text-orange-400 transition-colors">
         <input type="file" accept="image/*" onChange={handleImgUpload} className="hidden" />
@@ -58,7 +84,7 @@ const handleImgUpload = async (e) => {
     <button
         className="absolute bg-orange-500 border-none font-inter font-semibold px-4 py-2 text-lg rounded-4xl md:rounded-sm bottom-7 right-7 md:right-32 disabled:opacity-40 disabled:cursor-not-allowed hover:bg-orange-600 transition-colors"
         onClick={handleSubmit}
-        disabled={!text.trim() || ocrLoading}
+        disabled={(!text.trim() && !img) || ocrLoading}
     >
         {ocrLoading ? "Reading..." : "Check am"}
     </button>
