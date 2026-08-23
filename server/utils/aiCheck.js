@@ -28,26 +28,27 @@ export const aiCheck = async (text, imageAnalysis = null) => {
   // 1. Gather Tavily Search/Extract Context
   let searchResults = "No web search results available.";
   try {
-    if (text && text.trim()){
-    if (isUrl(text.trim())) {
-      const [generalResults, newsResults] = await Promise.all([
-    tavilyClient.search(text, { searchDepth: "advanced", topic: "general" }),
-    tavilyClient.search(text, { searchDepth: "advanced", topic: "news" }),
-]);
+    if (text && text.trim()) {
+        if (isUrl(text.trim())) {
+            const extracted = await tavilyClient.extract([text.trim()]);
+            searchResults = JSON.stringify(extracted.results);
+        } else {
+            const [generalResults, newsResults] = await Promise.all([
+                tavilyClient.search(text, { searchDepth: "advanced", topic: "general" }),
+                tavilyClient.search(text, { searchDepth: "advanced", topic: "news" }),
+            ]);
 
-searchResults = JSON.stringify({
-    general: generalResults.results,
-    news: newsResults.results,
-});
+            searchResults = JSON.stringify({
+                general: generalResults.results,
+                news: newsResults.results,
+            });
+        }
     } else {
-      searchResults = JSON.stringify(tavilyResponse.results);}}
-      else{
         searchResults = "No text was provided — evaluating based on image analysis only.";
-      }
-    
-  } catch (searchError) {
+    }
+} catch (searchError) {
     console.log("Tavily call failed:", searchError.message);
-  }
+}
 
   // 2. Unified Master Prompt
   const prompt = `You are a media literacy assistant for Nigerian users, helping people judge if a message or claim is credible.
