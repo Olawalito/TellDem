@@ -33,7 +33,7 @@ export const aiCheck = async (text, imageAnalysis = null) => {
       const extracted = await tavilyClient.extract([text.trim()]);
       searchResults = JSON.stringify(extracted.results);
     } else {
-      const tavilyResponse = await tavilyClient.search(text, { searchDepth: "advanced" });
+      const tavilyResponse = await tavilyClient.search(text, { searchDepth: "advanced", topic: "news" });
       searchResults = JSON.stringify(tavilyResponse.results);}}
       else{
         searchResults = "No text was provided — evaluating based on image analysis only.";
