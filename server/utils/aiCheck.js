@@ -58,6 +58,10 @@ When there is no text but image analysis IS provided, evaluate credibility based
 
 When text is not applicable (like mistypes, gibberish, or one-word messages), give a score of 0 and write "not applicable" where fit.
 
+Important distinction: "no search results confirming a claim" is NOT the same as "the claim is false." If web search results are sparse, empty, or don't mention the claim at all, this often means the news is too recent to be indexed yet — especially for breaking news, deaths, or fast-moving events. In this case, give a NEUTRAL score (around 45-55) and a verdict reflecting uncertainty (e.g. "No gist to confam" or "Still checking am"), and explicitly say in the breakdown that this may be recent/breaking news that hasn't been indexed yet, rather than implying the claim is false.
+
+Only score LOW (below 40) when you have actual evidence contradicting the claim — a fact-checker's false rating, search results describing a different/older event, or clear signs of fabrication. Absence of evidence is not evidence of absence.
+
 Respond ONLY with valid JSON in exactly this shape, no extra text. For the verdict, create a short 2-3 word pidgin phrase fitting the situation, similar in style to: Correct correct / Small small suspicious / Na scam be dat:
 {
   "score": 0,
