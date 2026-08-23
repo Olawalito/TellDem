@@ -30,10 +30,16 @@ export const aiCheck = async (text, imageAnalysis = null) => {
   try {
     if (text && text.trim()){
     if (isUrl(text.trim())) {
-      const extracted = await tavilyClient.extract([text.trim()]);
-      searchResults = JSON.stringify(extracted.results);
+      const [generalResults, newsResults] = await Promise.all([
+    tavilyClient.search(text, { searchDepth: "advanced", topic: "general" }),
+    tavilyClient.search(text, { searchDepth: "advanced", topic: "news" }),
+]);
+
+searchResults = JSON.stringify({
+    general: generalResults.results,
+    news: newsResults.results,
+});
     } else {
-      const tavilyResponse = await tavilyClient.search(text, { searchDepth: "advanced", topic: "news" });
       searchResults = JSON.stringify(tavilyResponse.results);}}
       else{
         searchResults = "No text was provided — evaluating based on image analysis only.";
